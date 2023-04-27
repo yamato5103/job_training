@@ -1,0 +1,24 @@
+package object_dir;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Hero h = new Hero();
+		h.name = "minato";
+		h.hp = 100;
+		System.out.println(h.name);
+
+		Matango m1 = new Matango();
+		m1.hp = 50;
+		m1.suffix = 'A';
+		Matango m2 = new Matango();
+		m1.hp = 40;
+		m1.suffix = 'B';
+
+		h.slip();
+		m1.run();		
+		m2.run();
+		h.run();
+	}
+
+}

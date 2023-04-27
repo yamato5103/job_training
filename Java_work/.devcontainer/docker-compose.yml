@@ -1,0 +1,54 @@
+version: '3.8'
+
+volumes:
+  postgres-data:
+
+services:
+  app:
+    container_name: javadev
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      # NOTE: POSTGRES_DB/USER/PASSWORD should match values in db container
+      # 注: POSTGRES_DB/USER/PASSWORD は、db コンテナーの値と一致する必要があります
+        POSTGRES_PASSWORD: postgres
+        POSTGRES_USER: postgres
+        POSTGRES_DB: postgres
+        POSTGRES_HOSTNAME: postgresdb
+
+    volumes:
+      - ../..:/workspaces:cached
+      
+    # Overrides default command so things don't shut down after the process ends.
+    # デフォルトのコマンドをオーバーライドして、プロセスの終了後にシャットダウンしないようにします。
+    command: sleep infinity
+
+    # Runs app on the same network as the database container, allows "forwardPorts" in devcontainer.json function.
+    # デフォルトのコマンドをオーバーライドして、プロセスの終了後にシャットダウンしないようにします。
+    network_mode: service:db
+
+    # Use "forwardPorts" in **devcontainer.json** to forward an app port locally. 
+    # (Adding the "ports" property to this file will not forward from a Codespace.)
+
+    # **devcontainer.json** で "forwardPorts" を使用して、アプリ ポートをローカルに転送します。
+    # (このファイルに「ports」プロパティを追加しても、Codespace からは転送されません。)
+
+  db:
+    container_name: postgresdb
+    image: postgres:latest
+    restart: unless-stopped
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    environment:
+      # NOTE: POSTGRES_DB/USER/PASSWORD should match values in app container
+      # 注: POSTGRES_DB/USER/PASSWORD は、アプリ コンテナーの値と一致する必要があります
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+
+    # Add "forwardPorts": ["5432"] to **devcontainer.json** to forward PostgreSQL locally.
+    # "forwardPorts": ["5432"] を **devcontainer.json** に追加して、PostgreSQL をローカルに転送します。
+    
+    # (Adding the "ports" property to this file will not forward from a Codespace.)
+    # (このファイルに「ports」プロパティを追加しても、Codespace からは転送されません。)

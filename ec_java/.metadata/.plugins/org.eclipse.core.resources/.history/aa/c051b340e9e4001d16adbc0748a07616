@@ -1,0 +1,16 @@
+package object_dir;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Hero h=new Hero();
+		h.name="minato";
+		h.hp=100;
+		System.out.println(h.name);
+		h.sit(5);
+		h.slip();
+		h.sit(25);
+		h.run();
+	}
+
+}

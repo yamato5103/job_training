@@ -1,0 +1,4 @@
+INDEX VERSION 1.132+C:\Users\yamat\OneDrive\デスクトップ\job_training_main\job_training\ec_java\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+1002706318.index
+725555719.index
