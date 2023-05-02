@@ -1,0 +1,21 @@
+package ch8_dir;
+
+public class Cleric {
+	String name;
+	int hp = 50;
+	final int Maxhp = 50;
+	int mp = 10;
+	final int Maxmp = 10;
+	
+	public void selfAid(){
+		System.out.println(this.name+"は魔法を唱えた");
+		this.hp=this.Maxhp;
+		this.mp-=5;
+		System.out.println("全回復!");
+		System.out.println(this.mp+"減った");
+		
+		
+		
+	}
+
+}

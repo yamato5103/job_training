@@ -1,0 +1,20 @@
+package object_d;
+
+public class Main3 {
+
+	public static void main(String[] args) {
+
+		
+		Thief t4= new Thief("yamada",40,10);
+		System.out.println(t4.name+t4.mp+t4.hp);
+
+//		Thief t1=new Thief("suga",20,6);
+//		Thief t2=new Thief("sato",20);
+//		Thief t3=new Thief("sato");
+//		System.out.println(t1.name);
+//		System.out.println(t2.mp);
+//		System.out.println(t3.hp);
+		
+	}
+
+}

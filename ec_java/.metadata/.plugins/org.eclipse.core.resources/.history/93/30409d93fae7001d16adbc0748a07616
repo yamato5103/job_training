@@ -1,0 +1,8 @@
+package parent;
+
+public class ParentMain {
+    public static void main(String[] args) {
+        HelloGrandParent hgp = new HelloGrandParent();
+        hgp.hello();
+    }
+}

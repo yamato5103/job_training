@@ -1,0 +1,9 @@
+package child;
+
+public class ChildMain {
+	public static void main(String[] args) {
+        HelloParent hp = new HelloParent();
+        hp.hello();
+    }
+}
+

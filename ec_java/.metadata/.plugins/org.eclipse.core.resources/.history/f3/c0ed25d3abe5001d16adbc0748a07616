@@ -1,0 +1,9 @@
+package object_d;
+
+public class Main2 {
+
+	public static void main(String[] args) {
+		Hero h1=new Hero();
+	}
+
+}

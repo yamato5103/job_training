@@ -1,0 +1,15 @@
+package inheritance_d;
+
+
+public class Matango {
+	int hp =50;
+	char suffix;
+	public Matango(char suffix ) {
+		this.suffix=suffix;
+	}
+	public void attack(Hero h) {
+		System.out.println("mash"+this.suffix+"attack");
+		System.out.println("10damage");
+		h.hp-=10;
+	}
+}

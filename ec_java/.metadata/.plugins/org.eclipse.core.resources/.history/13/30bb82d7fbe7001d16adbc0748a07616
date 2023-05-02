@@ -1,0 +1,9 @@
+package grandParent;
+
+public class HelloGrandParent {
+
+	public static void main(String[] args) {
+		System.out.println("hello grandparent");
+	}
+
+}

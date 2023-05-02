@@ -1,0 +1,15 @@
+package inheritance_d;
+
+
+public class Hero {
+	String name="minato";
+	int hp=100;
+	public void attack() {
+		System.out.println(this.name);
+		System.out.println("5damage");
+	}
+	public void run() {
+		System.out.println(this.name+" run away");
+	}
+
+}

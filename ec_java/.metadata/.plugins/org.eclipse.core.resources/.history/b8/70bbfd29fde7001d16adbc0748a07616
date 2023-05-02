@@ -1,0 +1,10 @@
+package grandParent;
+
+public class HelloGrandParent {
+
+	public void hello() {
+
+		System.out.println("hello grandparent");
+	}
+
+}

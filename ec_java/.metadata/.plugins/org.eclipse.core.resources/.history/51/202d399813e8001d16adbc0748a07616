@@ -1,0 +1,11 @@
+package object_d;
+//abstract
+public class Main5 {
+
+	public static void main(String[] args) {
+		Dancer d=new　Dancer();
+		d.name="sato";
+
+	}
+
+}
